@@ -1,0 +1,11 @@
+doctype html
+html
+  include ./head.pug
+
+  body
+    h1 Dynamic Lyrics Demo
+    audio(id="audio" src="./song/不曾回來過.mp3" controls autoplay loop)
+    p(id="time") CurrentTime：0
+    p(id="lyric") 歌詞：
+    script(src="./js/site.js")
+</audio>
