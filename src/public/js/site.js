@@ -4,7 +4,7 @@ var currentTimeElem, dtElem, elapsedElem;
 function onYouTubeIframeAPIReady() {
     var container = document.querySelector('#video-container');
     var opts = {
-        'videoId': 'bWdawOZ0mDI',
+        'videoId': 'y_cRDZXc3Hk',
         'events': {
             'onReady': handlePlayerReady,
             'onStateChange': handleStateChange
@@ -54,7 +54,7 @@ function pollCurrentTime() {
 
         if (lyrics) {
 
-            var diff = 2;
+            var diff = 5;
             var lyricGroup = document.getElementsByClassName('lyric');
 
             for (var i = 0; i < lyricGroup.length; i++) {

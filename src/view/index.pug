@@ -6,13 +6,17 @@ html
     h1 Dynamic Lyrics Demo
 
 
-    div(id="video-container")
-    div Reported current time: 
-      span(id="current-time") 0 
-    audio(id="audio" src="./song/不曾回來過.mp3" controls loop)
-    p(id="time") CurrentTime：0
-    p(id="lyric") 歌詞：
-    div(id="it")
-    div(id="lyric-box")
+    div().video-side
+      div(id="video-container")
+      div Reported current time: 
+        span(id="current-time") 0 
+      //- audio(id="audio" src="./song/不曾回來過.mp3" controls loop)
+      p(id="time") CurrentTime：0
+
+    div().lyric-side
+      p(id="lyric") 歌詞：
+      div(id="it")
+      div(id="lyric-box")
+
     script(src="./js/site.js")
 </audio>
