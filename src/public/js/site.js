@@ -16,15 +16,19 @@ fetch('api').then((response) => {
         }
     })
     .then((data) => {
-        // data 才是實際的 JSON 資料
+
         lyrics = data;
-        console.log(lyrics);
-        //console.log(Object.keys(lyrics)[0]);
+
+        var box = document.getElementById("lyric-box");
+        for (var i in lyrics) {
+            var para = document.createElement("p");
+            para.className = "lyric";
+            para.setAttribute("data-time", lyrics[i].time);
+            para.innerText = lyrics[i].lyric;
+            box.appendChild(para);
+        }
 
     });
-
-
-
 
 audio.addEventListener('timeupdate', () => {
 
@@ -43,6 +47,22 @@ audio.addEventListener('timeupdate', () => {
         } else {
             lyric.innerText = " 歌詞：";
         }
+
+
+        var lyricGroup = document.getElementsByClassName('lyric');
+        for (var i = 0; i < lyricGroup.length; i++) {
+            if (lyricGroup[i].getAttribute("data-time") < Math.round(time - 3, 0)) {
+
+                for (var j = 0; j < lyricGroup.length; j++) {
+                    lyricGroup[j].style.color = "black";
+                }
+                lyricGroup[i].style.color = "red";
+            } else {
+                lyricGroup[i].style.color = "black";
+            }
+            //style.background
+        }
+
     }
 
 }, false);
