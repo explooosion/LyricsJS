@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 export function lyrics() {
-    let fullpath = path.join(__dirname, '../res/不曾回來過.lrc');
+    let fullpath = path.join(__dirname, '../res/讓我留在你身邊.lrc');
     let lyrics = parseLyric(fs.readFileSync(fullpath, 'utf8'));
     return lyrics;
 }
