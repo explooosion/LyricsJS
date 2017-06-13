@@ -7,10 +7,16 @@ class YouTubePlayer {
             document.querySelector(element), {
                 'videoId': videoId,
                 'events': {
+                    /**
+                     * Handler - onReady
+                     */
                     'onReady': () => {
                         this.ytp.setVolume(100);
                         this.ytp.playVideo();
                     },
+                    /**
+                     * Handler - onStateChange
+                     */
                     'onStateChange': () => {
                         this.IsPlay = true;
                     }
@@ -20,6 +26,9 @@ class YouTubePlayer {
         this.IsPlay = false;
     }
 
+    /**
+     * Get Player Time
+     */
     getCurrentTime() {
         return this.ytp.getCurrentTime();
     }

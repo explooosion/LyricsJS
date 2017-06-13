@@ -1,15 +1,19 @@
 'use strict';
 
 import Router from 'koa-router';
-import {
-    lyrics
-} from '../lib/lyrics';
+import Lyrics from '../lib/lyrics';
 
 const router = new Router();
+const lyrics = new Lyrics();
 
-router.get('/', async(ctx, next) => {
+router.get('/:name', async(ctx, next) => {
 
-    ctx.body = lyrics();
+    let name = ctx.params.name;
+    if (name) {
+        ctx.body = lyrics.parseLyric(name);
+    } else {
+        ctx.throw(404);
+    }
 
 })
 
