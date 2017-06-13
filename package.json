@@ -7,7 +7,8 @@
     "test": "mocha --compilers js:babel-core/register --require babel-polyfill",
     "dev": "./node_modules/.bin/nodemon start.js",
     "start": "./node_modules/.bin/pm2 start start.js",
-    "stop": "./node_modules/.bin/pm2 kill"
+    "stop": "./node_modules/.bin/pm2 kill",
+    "web": "./node_modules/.bin/pm2 start start.js"
   },
   "author": "Robby",
   "repository": "koa-deploy",
