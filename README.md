@@ -1,5 +1,5 @@
 # LyricsJS
-A dynamic lyrics pachage
+A dynamic lyrics package
 
 ## Install
 ```bash
