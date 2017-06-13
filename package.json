@@ -6,9 +6,9 @@
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --require babel-polyfill",
     "dev": "./node_modules/.bin/nodemon start.js",
-    "start": "./node_modules/.bin/nodemon start.js",
+    "start": "forever start start.js",
     "stop": "pm2 kill",
-    "home": "./node_modules/.bin/nodemon start.js"
+    "home": "forever start start.js"
   },
   "author": "Robby",
   "repository": "koa-deploy",
@@ -20,6 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "ejs": "^2.5.6",
+    "forever": "^0.15.3",
     "koa": "^2.0.0-alpha.8",
     "koa-bodyparser": "^3.2.0",
     "koa-compose": "^4.0.0",
