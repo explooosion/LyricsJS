@@ -1,10 +1,11 @@
  var youtube;
  var lyrics;
  var timeElement = document.getElementById("current-time");
- window.onload = () => {
-     youtube = new YouTubePlayer('#video-container', 'y_cRDZXc3Hk');
 
-     loadLyrics("讓我留在你身邊");
+ window.onload = () => {
+     youtube = new YouTubePlayer('#video-container', 'qIF8xvSA0Gw');
+
+     loadLyrics("漂向北方");
      setInterval(TimeRun, 1);
  };
 
@@ -45,11 +46,11 @@
  function dynamicLyrics() {
      if (lyrics) {
 
-         let diff = 4;
+         let diff = 4; // 歌詞要增減速度
          let lyricGroup = document.getElementsByClassName('lyric');
 
          for (let i = 0; i < lyricGroup.length; i++) {
-             if (lyricGroup[i].getAttribute("data-time") <= youtube.getCurrentTime() - diff) {
+             if (Number(lyricGroup[i].getAttribute("data-time")) + diff <= youtube.getCurrentTime()) {
 
                  for (let j = 0; j < lyricGroup.length; j++) {
                      lyricGroup[j].style.color = "black";
