@@ -4,7 +4,7 @@
   "description": "Template for koa2",
   "main": "start.js",
   "scripts": {
-    "start": "node start.js"
+    "start": "pm2 start start.js"
   },
   "author": "Robby",
   "repository": "koa-deploy",
