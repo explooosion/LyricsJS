@@ -7,9 +7,9 @@
     "preinstall": "npm i -g pm2",
     "test": "mocha --compilers js:babel-core/register --require babel-polyfill",
     "dev": "./node_modules/.bin/nodemon start.js",
-    "start": "./node_modules/.bin/pm2 start start.js",
+    "start": "./node_modules/.bin/nodemon start.js",
     "stop": "./node_modules/.bin/pm2 kill",
-    "web": "./node_modules/.bin/pm2 start start.js"
+    "web": "./node_modules/.bin/nodemon start.js"
   },
   "author": "Robby",
   "repository": "koa-deploy",
