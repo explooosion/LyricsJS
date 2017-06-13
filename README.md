@@ -1,5 +1,5 @@
 # LyricsJS
-a dynamic lyrics pachage
+A dynamic lyrics pachage
 
 ## Install
 ```bash
