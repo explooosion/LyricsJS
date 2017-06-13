@@ -4,8 +4,8 @@
  window.onload = () => {
      youtube = new YouTubePlayer('#video-container', 'y_cRDZXc3Hk');
 
-     setInterval(TimeRun, 1);
      loadLyrics("讓我留在你身邊");
+     setInterval(TimeRun, 1);
  };
 
  function TimeRun() {
@@ -28,6 +28,7 @@
          })
          .then((data) => {
 
+             console.log(data);
              lyrics = data;
              let box = document.getElementById("lyric-box");
 

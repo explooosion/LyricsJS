@@ -18,6 +18,7 @@ class Lyrics {
         this.name = name;
         this.fullpath = path.join(__dirname, `../res/${this.name}.lrc`);
         this.lrc = fs.readFileSync(this.fullpath, 'utf8');
+        this.lrcObj = new Array();
     }
 
     /**

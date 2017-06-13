@@ -5,7 +5,6 @@ html
   body
     h1 Dynamic Lyrics Demo
 
-
     div().video-side
       div(id="video-container")
       div Reported current time: 
@@ -13,6 +12,7 @@ html
       //- audio(id="audio" src="./song/不曾回來過.mp3" controls loop)
 
     div().lyric-side
+      a(href="api/讓我留在你身邊", title="title", target="_blank") API
       p(id="lyric") 歌詞：
       div(id="it")
       div(id="lyric-box")
